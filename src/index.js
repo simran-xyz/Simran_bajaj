@@ -13,9 +13,9 @@ app.post("/bfhl",async(req, res) => {
     
         data.map((item) => {
             if(numberRegex.test(item)) {
-                numArr.push(item);
+                num.push(item);
             } else if(characterRegex.test(item)){
-                charArr.push(item);
+                character.push(item);
             }
         });
     
@@ -24,8 +24,8 @@ app.post("/bfhl",async(req, res) => {
             user_id: "simran_singla_29032002",
             email: "simran1155.cse19@chitkara.edu.in",
             roll_number:"1910991155" ,
-            numbers: numArr,
-            alphabets: charArr
+            numbers: num,
+            alphabets: character
         };
     
         res.status(200).send(result);
